@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to Flask!</h1>
+<br>
+<p>Click <a href="/logout">here</a> to logout.</p>
+
+<br><br>
+<a href="http://www.supersaas.com/schedule/deepakpathania/Conference_Rooms">Book Now!</a>
+<h3>Rooms available:</h3>
+{% for post in posts %}
+  <strong>Room:</strong> {{ post.title }} <br>
+  <strong>Select_id:</strong> {{ post.description }} <br>
+<br>
+{% endfor %}
+
+
+{% endblock %}
